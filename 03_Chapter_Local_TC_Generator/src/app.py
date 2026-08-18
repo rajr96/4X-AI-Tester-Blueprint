@@ -10,6 +10,7 @@ import streamlit as st
 from config_store import load_config
 from jira_client import JiraError, fetch_issue
 from llm_client import LLMError, generate
+from exporter import export_test_cases
 
 
 TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "test_case_template.md"
@@ -56,7 +57,16 @@ if prompt := st.chat_input("Create test cases for QA-102"):
             with st.spinner(f"Fetching {key} and drafting test cases..."):
                 issue = fetch_issue(config.jira_url, config.jira_email, config.jira_api_token, key)
                 answer = generate(config, _build_prompt(issue))
-        except (JiraError, LLMError, OSError) as exc:
+                csv_path, xlsx_path = export_test_cases(key, answer)
+        except (JiraError, LLMError, OSError, ValueError) as exc:
             answer = str(exc)
     st.session_state.messages.append({"role": "assistant", "content": answer})
     _render_message(st.session_state.messages[-1])
+    if key and "csv_path" in locals() and "xlsx_path" in locals():
+        st.download_button("Download CSV", csv_path.read_bytes(), csv_path.name, "text/csv")
+        st.download_button(
+            "Download Excel",
+            xlsx_path.read_bytes(),
+            xlsx_path.name,
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        )

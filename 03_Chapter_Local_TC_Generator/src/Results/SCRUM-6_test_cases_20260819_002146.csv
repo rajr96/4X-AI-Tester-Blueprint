@@ -1,0 +1,12 @@
+﻿test_case_id,scenario,title,priority,type,preconditions,test_data,steps,expected_result,overall_expected_result,assumptions_coverage_gaps
+TC-001,User Authentication & Authorization,Successful Login,High,Functional|Positive,Valid email and password,Valid email and password,"Enter valid email and password
+Click 'Login'",User is successfully logged in and redirected to the dashboard.,Successful login,No error messages
+TC-002,User Authentication & Authorization,Login with Invalid Password,High,Functional|Negative,Valid email and password,Invalid password,"Enter invalid password
+Click 'Login'",An error message is displayed indicating invalid password.,Error message,Error message displayed
+TC-003,User Authentication & Authorization,Login with Missing Email,Medium,Functional|Negative,Valid email address,Empty email address,"Enter empty email address
+Click 'Login'",An error message is displayed indicating missing email.,Error message,Error message displayed
+TC-004,User Authentication & Authorization,Login with Email and Password,Medium,Functional|Positive,Valid email and password,Valid email and password,"Enter valid email and password
+Click 'Login'",User is successfully logged in and redirected to the dashboard.,Successful login,Successful login
+TC-005,User Authentication & Authorization,Login with Password Reset,Medium,Functional|Positive,Valid email address,Reset password email,"Enter valid email address
+Click 'Reset Password'
+Follow reset instructions",Password reset process initiated and user redirected to the dashboard.,Password reset,Password reset initiated
