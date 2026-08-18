@@ -15,3 +15,5 @@ go go go:
 - 01_chapter_LLM_Basics
 - 02_Chapter_Prompt_eng
 - References
+
+- Last synchronized: 2026-08-18 19:22:24
