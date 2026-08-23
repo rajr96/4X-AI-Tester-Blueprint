@@ -1,0 +1,104 @@
+{
+  "output": "04_Chapter_JobKitAI/output/Rajesh_Rachakonda_Mouser_Resume.docx",
+  "name": "RAJESH RACHAKONDA",
+  "title": "==SOFTWARE QA TEAM LEAD==  |  SENIOR SOFTWARE TEST ENGINEER",
+  "contact": [
+    ["Canberra, ACT, Australia", "rajesh.rachakonda@email.com|mailto:rajesh.rachakonda@email.com", "+61 400 000 000"],
+    ["linkedin.com/in/rajesh-rachakonda|https://linkedin.com/in/rajesh-rachakonda"],
+    ["**Security Clearance**: Baseline (Eligible for NV2)", "**Citizenship**: Australian Citizen"]
+  ],
+  "margin": 0.5,
+  "sections": [
+    {
+      "heading": "PROFESSIONAL SUMMARY",
+      "body": "Accomplished ==Software QA Team Lead== and Senior Software Test Engineer with 18+ years of experience ==setting up test environments, designing test plans, and executing test cases== for mission-critical platforms. ==Expertise in functional, regression, integration, and UAT phases==. Proven ability to ==partner with automation teams==, analyze QA processes, and ==troubleshoot quality issues using Root Cause Analysis==. Demonstrated success delivering within Agile / DevOps environments and managing defect lifecycles."
+    },
+    {
+      "heading": "CORE COMPETENCIES & TECHNICAL SKILLS",
+      "rows": [
+        ["==Testing Phases & Tech==", "==Functional, Regression, Integration, UAT==, Performance Testing, ==UI/UX Validation==, Risk-Based Testing, ==Root Cause Analysis=="],
+        ["==Automation & Tools==", "==Selenium==, ==Java==, ==VB Script==, ==QTP/UFT==, UNIX Shell Scripting, C++"],
+        ["==API & Data Verification==", "==REST/SOAP APIs==, ==Postman, SoapUI==, WSDL, XML, JSON, Microsoft SQL Server, Oracle (SQL / PL-SQL), Teradata"],
+        ["==Delivery Environment==", "==Agile, DevOps, Continuous Delivery==, ==Azure DevOps QA Implementation==, Jira, HP ALM/QC, TFS"],
+        ["Leadership & Management", "==Define Metrics & Reports==, Work Plan Tracking, Technical Guidance, Process Improvements, Cross Domain Solutions"]
+      ],
+      "note": "Highlighted areas map to Mouser's explicit requirements. Tools you do not have (BDD, pytest, Robot Framework, JMeter, Python, C) are omitted per strict honesty rules."
+    },
+    {
+      "heading": "PROFESSIONAL EXPERIENCE",
+      "roles": [
+        {
+          "title": "Senior Software Test Engineer / ==QA Lead==",
+          "org": "Department of Employment and Workplace Relations (DEWR)",
+          "meta": "Jan 2022 – Present  |  Canberra, ACT",
+          "bullets": [
+             "==Lead QA efforts to design and create test conditions== and scripts for bespoke platforms and CIAM security gateways.",
+             "==Partner with teams to troubleshoot quality issues==, executing investigative testing to isolate defects across API layers and backend databases.",
+             "==Ensure process improvements and compliance== by managing comprehensive test plans and execution records in ==Azure DevOps==.",
+             "==Experience of testing REST APIs== and secure payload transfers using Postman and SOAP/WSDL.",
+             "Formulated and executed complex SQL queries to ==develop statistics and monitor data integrity==."
+          ]
+        },
+        {
+          "title": "Senior Test Analyst / ==QA Coordinator==",
+          "org": "South Australia Power Networks (SAPN)",
+          "meta": "Mar 2020 – Dec 2021  |  Adelaide, SA",
+          "bullets": [
+            "==Tracked project work plans for delivery==, directing integration and ==User Acceptance Testing== for large-scale SAP systems.",
+            "==Analyzed existing quality processes== to validate Batch & Interface data flows and market settlement data.",
+            "==Experience of testing SOAP/REST web services== via ==SoapUI== and ==Postman==, auditing payloads against strict standards."
+          ]
+        },
+        {
+          "title": "Senior QA Analyst",
+          "org": "Depository Trust & Clearing Corporation (DTCC)",
+          "meta": "Feb 2018 – Dec 2019  |  Jersey City, NJ, USA",
+          "bullets": [
+             "==Set up test environments and executed test scenarios== for middleware messaging across SOAP, REST, and MQ Visual Edit protocols.",
+             "==Provided technical guidance== in constructing advanced SQL scripts in an ==Agile engineering environment==."
+          ]
+        },
+        {
+           "title": "Enterprise Quality Assurance Analyst",
+           "org": "Cigna",
+           "meta": "Jan 2016 – Jan 2018  |  Nashville, TN / Horsham, PA, USA",
+           "bullets": [
+               "Delivered enterprise-level testing, verifying complex source-to-target data mappings."
+           ]
+        }
+      ]
+    },
+    {
+        "heading": "EARLIER CAREER HIGHLIGHTS",
+        "roles": [
+            {
+               "title": "Senior Test Analyst",
+               "org": "Return To Work South Australia",
+               "meta": "Nov 2014 – Sep 2015",
+               "bullets": ["Executed ==Integration and System testing==; generated scripts to perform ==automated testing with HP UFT/QTP=="]
+            },
+           {
+               "title": "Senior Test Analyst",
+               "org": "Department of Human Services",
+               "meta": "Jan 2014 – Oct 2014",
+               "bullets": ["Designed test plans and automation for portals; conducted cross-platform mobile testing."]
+            },
+            {
+               "title": "Test Analyst & Systems Assistant",
+               "org": "University of New South Wales",
+               "meta": "Sep 2007 – Apr 2012",
+               "bullets": ["==Trained team members== on diagnostics; wrote ==PL/SQL and Shell automation scripts=="]
+            }
+        ]
+    },
+    {
+      "heading": "EDUCATION & CERTIFICATIONS",
+      "rows": [
+        ["Certifications", "==ISTQB Certified Software Test Engineer== · Oracle Certified Associate (Database 11g)"],
+        ["==Bachelor's Degree==", "==Bachelor of Commerce (B.Com)== — Osmania University, India (2002)"],
+        ["Advanced Degrees", "Master of Professional Accounting (MPA) · Advanced Diploma in Computing (Systems Architecture)"]
+      ],
+      "note": "Both ISTQB and Bachelor's Degree explicitly align with MUST HAVE / PLUS requirements for Mouser."
+    }
+  ]
+}

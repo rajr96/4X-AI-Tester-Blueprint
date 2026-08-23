@@ -15,6 +15,7 @@ go go go:
 - 01_chapter_LLM_Basics
 - 02_Chapter_Prompt_eng
 - 03_Chapter_Local_TC_Generator
+- 04_Chapter_JobKitAI
 - References
 
 ## Local Jira Test Case Generator

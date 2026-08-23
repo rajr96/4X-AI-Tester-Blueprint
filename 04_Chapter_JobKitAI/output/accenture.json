@@ -1,0 +1,120 @@
+{
+  "output": "04_Chapter_JobKitAI/output/Rajesh_Rachakonda_Accenture_Resume.docx",
+  "name": "RAJESH RACHAKONDA",
+  "title": "==TEST AUTOMATION LEAD==  |  SENIOR SOFTWARE TEST ENGINEER",
+  "contact": [
+    ["Canberra, ACT, Australia", "rajesh.rachakonda@email.com|mailto:rajesh.rachakonda@email.com", "+61 400 000 000"],
+    ["linkedin.com/in/rajesh-rachakonda|https://linkedin.com/in/rajesh-rachakonda"],
+    ["**Security Clearance**: Baseline (Eligible for NV2)", "**Citizenship**: Australian Citizen"]
+  ],
+  "margin": 0.5,
+  "sections": [
+    {
+      "heading": "PROFESSIONAL SUMMARY",
+      "body": "Accomplished ==Test Automation Lead== and Senior Software Test Engineer with **18+ years** of comprehensive experience designing, planning, and executing end-to-end test programs across mission-critical public sector and secure enterprise environments. Proven track record leading the transformation of testing into a continuous and efficient quality engineering function. Expert in ==Functional Test Planning==, implementing quality processes, and evaluating bespoke and COTS software engineering solutions to assure strict compliance with functional and non-functional requirements."
+    },
+    {
+      "heading": "CORE COMPETENCIES & TECHNICAL SKILLS",
+      "rows": [
+        ["==Functional Test Planning==", "Test Design & Architecture, Testing Strategies, ==Functional== & Non-Functional Testing, ==Quality Assurance Methodologies==, Defect Lifecycle Management, Agile/Scrum, RTM."],
+        ["==Automated Testing==", "==Automated Testing Frameworks==, CI/CD Pipeline QA, UFT/QTP, ==Selenium==, UNIX Shell Scripting, Object-Oriented Concepts (Java, C++), JavaScript, VBScript"],
+        ["==Leadership & Advisory==", "==Influencing & Advisory Skills==, ==Team Decisions==, Cross-team engagement, Stakeholder Communication, ==Test Result Analysis & Actionable Insights=="],
+        ["API & Identity Testing", "Postman, SoapUI, RESTful APIs, SOAP/WSDL, XML, JSON, OAuth2, Bearer Tokens, SAML, SSO Authentication, ADFS, Identity APIs (MyID, MyGov)"],
+        ["Architecture & Solutions", "Bespoke Systems, COTS Integration, Secure Data Exchange, Cross Domain Solution (CDS) Concepts"],
+        ["Operating Systems & Networking", "Linux (RHEL, Solaris, Unix), Windows, Network Diagnostics (Cisco, TCP/IP, Wireshark/tcpdump)"],
+        ["Database & Enterprise", "Microsoft SQL Server, Oracle, DB2, Teradata, Complex Multi-Table Joins, Azure DevOps, Jira, HP ALM/QC, TFS, SAP S/4 HANA"]
+      ],
+      "note": "Highlighted areas map directly to Accenture's explicitly requested skills: Functional Test Planning (Must Have), Automated Testing Frameworks (Good To Have), and Leadership/Advisory capabilities."
+    },
+    {
+      "heading": "PROFESSIONAL EXPERIENCE",
+      "roles": [
+        {
+          "title": "==Test Automation Lead== / Senior Software Test Engineer",
+          "org": "Department of Employment and Workplace Relations (DEWR)",
+          "meta": "Jan 2022 – Present  |  Canberra, ACT",
+          "bullets": [
+            "==Lead the transformation of testing strategies==, spearheading end-to-end ==functional test planning==, integration, regression, and UI/accessibility testing across mission-critical citizen-facing bespoke platforms.",
+            "==Provide solutions to problems across multiple teams==, validating authentication and secure payload transfers across boundary systems (ADMS, JOAC, Supervisor App, MyGov, MyID) in restricted environments.",
+            "==Engage with key stakeholders and contribute to team decisions==, utilizing deep system knowledge to execute investigative test cases and isolate defects.",
+            "==Implement quality processes and ensure traceability== by authoring and managing comprehensive test plans and scripts in Azure DevOps, aligning with complex business requirements.",
+            "Formulated and executed complex SQL queries on Microsoft SQL Server 18 to verify transaction integrity."
+          ]
+        },
+        {
+          "title": "Senior Test Analyst / UAT Business Tester",
+          "org": "South Australia Power Networks (SAPN)",
+          "meta": "Mar 2020 – Dec 2021  |  Adelaide, SA",
+          "bullets": [
+            "==Directed testing practices and team efforts== for integration and UAT for large-scale COTS (SAP S/4 HANA IS-U) deployments and third-party interfaces.",
+            "==Continuously assessed system performance==, monitoring IDoc transfers and batch processing to ensure reliability.",
+            "Validated SOAP/REST web services via SoapUI and Postman, auditing payload structures against external standards."
+          ]
+        },
+        {
+          "title": "Senior QA Analyst",
+          "org": "Depository Trust & Clearing Corporation (DTCC)",
+          "meta": "Feb 2018 – Dec 2019  |  Jersey City, NJ, USA",
+          "bullets": [
+            "==Led functional and non-functional verification== for the Trade Information Warehouse, evaluating middleware messaging across multiple protocols.",
+            "==Analyzed test results to provide insights==, constructing advanced SQL scripts to audit trade feeds and database integrity in an Agile engineering environment."
+          ]
+        },
+          {
+          "title": "Enterprise Quality Assurance Analyst",
+          "org": "Cigna",
+          "meta": "Jan 2016 – Jan 2018  |  Nashville, TN / Horsham, PA, USA",
+          "bullets": [
+             "Delivered enterprise-level testing for healthcare compliance, CMS Audit Remediation, and Access Management systems.",
+             "Collaborated with engineering teams to validate source-to-target data mappings and transformation logic."
+          ]
+        }
+      ]
+    },
+    {
+        "heading": "EARLIER CAREER HIGHLIGHTS",
+        "roles": [
+            {
+               "title": "Senior Test Analyst",
+               "org": "Return To Work South Australia (Adelaide)",
+               "meta": "Nov 2014 – Sep 2015",
+               "bullets": ["Executed SIT/system testing for Claims Management; ==automated regression suites with HP UFT==."]
+            },
+           {
+               "title": "Senior Test Analyst",
+               "org": "Department of Human Services (Adelaide)",
+               "meta": "Jan 2014 – Oct 2014",
+               "bullets": ["Created test plans, scripts, and ==automation for myGov portrals=="]
+            },
+            {
+               "title": "Senior Test Analyst",
+               "org": "Department of Immigration and Border Protection (Canberra)",
+               "meta": "Sep 2013 – Jan 2014",
+               "bullets": ["Managed BAU defect lifecycles, regression execution in Agile environments."]
+            },
+             {
+               "title": "Test Analyst",
+               "org": "Department of Immigration and Citizenship (Brisbane)",
+               "meta": "Apr 2012 – Jun 2013",
+               "bullets": ["Executed test suites for eCitizenship; linked cases to requirements in HP ALM."]
+            },
+            {
+               "title": "Test Analyst & Systems Assistant",
+               "org": "University of New South Wales (Sydney)",
+               "meta": "Sep 2007 – Apr 2012",
+               "bullets": ["Constructed Test Object Matrices; administered Oracle databases; ==wrote PL/SQL and Shell automation scripts==."]
+            }
+        ]
+    },
+    {
+      "heading": "EDUCATION & CERTIFICATIONS",
+      "rows": [
+        ["Certifications", "ISTQB Certified Software Test Engineer · Oracle Certified Associate (Database 11g)"],
+        ["Master's Degree", "Master of Professional Accounting (MPA) — Central Queensland University, Sydney (2007)"],
+        ["Bachelor's Degree", "==Bachelor of Commerce (B.Com) ==— Osmania University, India (2002)"],
+        ["Advanced Diploma", "Advanced Diploma in Computing (Object-Oriented Programming & Systems Architecture)"]
+      ],
+       "note": "Accenture explicitly requires 15 years of full-time education. You easily meet this (B.Com 3 yrs + MPA 2 yrs + Advanced Diploma). This structure makes your educational timeline clear."
+    }
+  ]
+}
