@@ -72,6 +72,9 @@ def load_config() -> AppConfig:
     provider = local_settings.get("provider", DEFAULT_PROVIDER).lower()
     if provider not in {"ollama", "groq"}:
         provider = DEFAULT_PROVIDER
+    groq_api_key = os.getenv("GROQ_API_TOKEN", os.getenv("GROQ_API_KEY", "")).strip()
+    if os.getenv("VERCEL") == "1" and groq_api_key:
+        provider = "groq"
 
     return AppConfig(
         jira_url=_normalize_jira_url(os.getenv("JIRA_URL", os.getenv("JIRA_BASE_URL", ""))),
@@ -79,7 +82,7 @@ def load_config() -> AppConfig:
         jira_api_token=os.getenv("JIRA_API_TOKEN", "").strip(),
         ollama_url=os.getenv("OLLAMA_URL", DEFAULT_OLLAMA_URL).strip().rstrip("/"),
         ollama_model=os.getenv("OLLAMA_MODEL", DEFAULT_OLLAMA_MODEL).strip(),
-        groq_api_key=os.getenv("GROQ_API_TOKEN", os.getenv("GROQ_API_KEY", "")).strip(),
+        groq_api_key=groq_api_key,
         groq_model=os.getenv("GROQ_MODEL", DEFAULT_GROQ_MODEL).strip() or DEFAULT_GROQ_MODEL,
         provider=provider,
     )

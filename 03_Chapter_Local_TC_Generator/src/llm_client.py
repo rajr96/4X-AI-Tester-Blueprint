@@ -104,4 +104,6 @@ def generate(config: AppConfig, prompt: str) -> str:
         try:
             return _request_groq(config, prompt)
         except (requests.RequestException, ValueError, IndexError, KeyError, LLMError) as groq_error:
-            raise LLMError("Both Ollama and Groq generation failed.") from groq_error
+            raise LLMError(
+                f"Both Ollama and Groq generation failed. Ollama: {ollama_error} Groq: {groq_error}"
+            ) from groq_error
