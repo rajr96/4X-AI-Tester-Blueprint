@@ -74,4 +74,4 @@ python -m streamlit run app.py
 
 Use the Chat screen with a request such as `create test cases for SCRUM-6`. Select the LLM provider from the Settings screen. Generated reports are saved under `src/Results` with names such as `SCRUM-6_test_cases_20260819_002146.csv` and `.xlsx`. Each applicable scenario produces 2 to 5 cases, with 2 to 70 cases allowed overall; invalid model responses are rejected before export.
 
-- Last synchronized: 2026-08-19
+- Last synchronized: 2026-08-24
