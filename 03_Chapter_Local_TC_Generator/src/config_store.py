@@ -10,6 +10,7 @@ from pathlib import Path
 
 DEFAULT_OLLAMA_URL = "http://localhost:11434"
 DEFAULT_OLLAMA_MODEL = "gemma3:1b"
+DEFAULT_GROQ_MODEL = "llama-3.3-70b-versatile"
 DEFAULT_PROVIDER = "ollama"
 SETTINGS_PATH = Path(__file__).resolve().parent / ".config" / "settings.json"
 
@@ -22,6 +23,7 @@ class AppConfig:
     ollama_url: str
     ollama_model: str
     groq_api_key: str
+    groq_model: str
     provider: str
 
     @property
@@ -78,6 +80,7 @@ def load_config() -> AppConfig:
         ollama_url=os.getenv("OLLAMA_URL", DEFAULT_OLLAMA_URL).strip().rstrip("/"),
         ollama_model=os.getenv("OLLAMA_MODEL", DEFAULT_OLLAMA_MODEL).strip(),
         groq_api_key=os.getenv("GROQ_API_TOKEN", os.getenv("GROQ_API_KEY", "")).strip(),
+        groq_model=os.getenv("GROQ_MODEL", DEFAULT_GROQ_MODEL).strip() or DEFAULT_GROQ_MODEL,
         provider=provider,
     )
 

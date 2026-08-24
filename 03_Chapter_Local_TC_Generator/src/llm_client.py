@@ -65,13 +65,23 @@ def _request_groq(config: AppConfig, prompt: str) -> str:
         "https://api.groq.com/openai/v1/chat/completions",
         headers={"Authorization": f"Bearer {config.groq_api_key}"},
         json={
-            "model": "llama-3.1-8b-instant",
+            "model": config.groq_model,
             "messages": [{"role": "user", "content": prompt}],
             "temperature": 0,
         },
         timeout=120,
     )
-    response.raise_for_status()
+    if response.status_code in {401, 403}:
+        raise LLMError("Groq rejected the configured API key. Check GROQ_API_TOKEN.")
+    if response.status_code == 404:
+        raise LLMError(
+            f"Groq model '{config.groq_model}' is unavailable or the key is invalid. "
+            "Update GROQ_MODEL and verify GROQ_API_TOKEN."
+        )
+    try:
+        response.raise_for_status()
+    except requests.HTTPError as exc:
+        raise LLMError(f"Groq request failed with status {response.status_code}: {response.text[:200]}") from exc
     result: Any = response.json().get("choices", [{}])[0].get("message", {}).get("content")
     if not result:
         raise LLMError("Groq returned an empty response.")

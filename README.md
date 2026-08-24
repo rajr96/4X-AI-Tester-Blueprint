@@ -18,7 +18,31 @@ go go go:
 - 04_Chapter_JobKitAI
 - References
 
-## Local Jira Test Case Generator
+## Verified Working Apps
+
+### 1) JobTracker (Vite + React)
+- Local URL: http://localhost:4173/
+- Vercel production URL: https://jobtrackerai-fxst1982v-aib-lueprint4x.vercel.app
+- Project folder: `05_Chapter_JobTrackerAI`
+
+Start locally:
+```powershell
+cd "C:\Users\rajra\Documents\AI\4X AI Tester Blueprint\05_Chapter_JobTrackerAI"
+npm run dev -- --host 0.0.0.0 --port 4173
+```
+
+### 2) Jira Test Case Generator (FastAPI + Vercel)
+- Local URL: http://localhost:8501/ (Streamlit dev mode)
+- Vercel production URL: https://jira-test-case-generator-delta.vercel.app
+- Project folder: `03_Chapter_Local_TC_Generator`
+
+Start locally for API validation:
+```powershell
+cd "C:\Users\rajra\Documents\AI\4X AI Tester Blueprint\03_Chapter_Local_TC_Generator"
+python -m uvicorn api.index:app --host 0.0.0.0 --port 8000
+```
+
+Use `python -m streamlit run src/app.py` only for the original local Streamlit UI if needed.
 
 The `03_Chapter_Local_TC_Generator/src` folder contains a Streamlit application that fetches a Jira issue, loads a local test-case template, generates test cases with Ollama, and falls back to Groq when configured and required.
 
