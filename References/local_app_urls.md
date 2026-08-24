@@ -4,7 +4,7 @@
 
 ### 1) JobTracker
 - Local URL: http://localhost:4173/
-- Vercel production URL: https://jobtrackerai-fxst1982v-aib-lueprint4x.vercel.app
+- Vercel production URL: https://jobtrackerai-five.vercel.app
 - Project folder: `C:\Users\rajra\Documents\AI\4X AI Tester Blueprint\05_Chapter_JobTrackerAI`
 - Start command:
   ```powershell
@@ -24,5 +24,5 @@
 
 ## Notes
 - These were verified locally in the current environment.
-- JobTracker is also deployed to Vercel and available at https://jobtrackerai-fxst1982v-aib-lueprint4x.vercel.app
+- JobTracker is also deployed to Vercel and available at https://jobtrackerai-five.vercel.app
 - Use these URLs for quick access while the apps are running.

@@ -22,7 +22,7 @@ go go go:
 
 ### 1) JobTracker (Vite + React)
 - Local URL: http://localhost:4173/
-- Vercel production URL: https://jobtrackerai-fxst1982v-aib-lueprint4x.vercel.app
+- Vercel production URL: https://jobtrackerai-five.vercel.app
 - Project folder: `05_Chapter_JobTrackerAI`
 
 Start locally:

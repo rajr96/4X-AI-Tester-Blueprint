@@ -209,6 +209,51 @@ export default function App() {
             </div>
           </section>
 
+          <section className="rounded-3xl border border-slate-800 bg-slate-900/80 p-6">
+            <div className="mb-5 flex items-center justify-between">
+              <h3 className="text-xl font-semibold text-white">Tracker Board</h3>
+              <span className="text-sm text-slate-400">{filteredJobs.length} visible</span>
+            </div>
+
+            <DragDropContext onDragEnd={handleDragEnd}>
+              <div className="grid gap-4 xl:grid-cols-6">
+                {COLUMNS.map(col => {
+                  const colJobs = filteredJobs.filter(j => j.status === col);
+
+                  return (
+                    <div key={col} className="min-h-[220px] rounded-2xl border border-slate-800 bg-slate-950/70 p-3">
+                      <div className="mb-3 flex items-center justify-between px-1">
+                        <h4 className="text-base font-medium text-white">{col}</h4>
+                        <span className="rounded-full bg-slate-800 px-2 py-0.5 text-xs text-slate-200">{colJobs.length}</span>
+                      </div>
+
+                      <Droppable droppableId={col}>
+                        {(provided) => (
+                          <div ref={provided.innerRef} {...provided.droppableProps} className="space-y-3">
+                            {colJobs.length ? colJobs.map((job, index) => (
+                              <JobCard
+                                key={job.id}
+                                job={job}
+                                index={index}
+                                onEdit={(j) => { setEditingJob(j); setIsModalOpen(true); }}
+                                onDelete={handleDelete}
+                              />
+                            )) : (
+                              <div className="rounded-xl border border-dashed border-slate-700 bg-slate-900/40 p-3 text-center text-sm text-slate-500">
+                                No jobs
+                              </div>
+                            )}
+                            {provided.placeholder}
+                          </div>
+                        )}
+                      </Droppable>
+                    </div>
+                  );
+                })}
+              </div>
+            </DragDropContext>
+          </section>
+
           <section className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
             <div className="rounded-3xl border border-slate-800 bg-slate-900/80 p-6">
               <h3 className="text-xl font-semibold text-white">Application Funnel</h3>
@@ -301,50 +346,6 @@ export default function App() {
             </div>
           </section>
 
-          <section className="rounded-3xl border border-slate-800 bg-slate-900/80 p-6">
-            <div className="mb-5 flex items-center justify-between">
-              <h3 className="text-xl font-semibold text-white">Tracker Board</h3>
-              <span className="text-sm text-slate-400">{filteredJobs.length} visible</span>
-            </div>
-
-            <DragDropContext onDragEnd={handleDragEnd}>
-              <div className="grid gap-4 xl:grid-cols-6">
-                {COLUMNS.map(col => {
-                  const colJobs = filteredJobs.filter(j => j.status === col);
-
-                  return (
-                    <div key={col} className="min-h-[220px] rounded-2xl border border-slate-800 bg-slate-950/70 p-3">
-                      <div className="mb-3 flex items-center justify-between px-1">
-                        <h4 className="text-base font-medium text-white">{col}</h4>
-                        <span className="rounded-full bg-slate-800 px-2 py-0.5 text-xs text-slate-200">{colJobs.length}</span>
-                      </div>
-
-                      <Droppable droppableId={col}>
-                        {(provided) => (
-                          <div ref={provided.innerRef} {...provided.droppableProps} className="space-y-3">
-                            {colJobs.length ? colJobs.map((job, index) => (
-                              <JobCard
-                                key={job.id}
-                                job={job}
-                                index={index}
-                                onEdit={(j) => { setEditingJob(j); setIsModalOpen(true); }}
-                                onDelete={handleDelete}
-                              />
-                            )) : (
-                              <div className="rounded-xl border border-dashed border-slate-700 bg-slate-900/40 p-3 text-center text-sm text-slate-500">
-                                No jobs
-                              </div>
-                            )}
-                            {provided.placeholder}
-                          </div>
-                        )}
-                      </Droppable>
-                    </div>
-                  );
-                })}
-              </div>
-            </DragDropContext>
-          </section>
         </main>
       </div>
 
