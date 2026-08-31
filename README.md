@@ -1,25 +1,26 @@
 # 4X AI Tester Blueprint
 
 ## Repository goal
-This repository is a structured learning and implementation blueprint for building AI-driven test generation, QA automation, and job-application tooling using local and cloud AI workflows.
+This repository is a structured learning and implementation blueprint for building AI-powered QA, test generation, agile workflows, job tooling, and productivity automation.
 
 It combines:
-- LLM fundamentals and prompt engineering
-- Local test-case generation from Jira requirements
-- Resume and job matching workflows
-- Job tracking dashboards
-- Brand and LinkedIn content repurposing
-- AI agent orchestration for testing tasks
+- LLM fundamentals and anti-hallucination discipline
+- Prompt engineering and workflow design
+- Local Jira-to-test-case generation
+- Job search and resume tailoring workflows
+- Job tracking dashboards and task management
+- Personal brand and LinkedIn content repurposing
+- AI agent-style testing orchestration
 
 ## Quick git workflow
-Use this command prompt to perform the full git workflow:
+Use this sequence for updates and publication:
 
 ```text
-go go go:
-1. Update parent README file.
-2. Add all files.
-3. Commit all changes.
-4. Push code to https://github.com/rajr96/4X-AI-Tester-Blueprint.git
+1. Update parent README.md
+2. Review all key files and app changes
+3. Add files to git
+4. Commit all changes
+5. Push to https://github.com/rajr96/4X-AI-Tester-Blueprint.git
 ```
 
 ## Repository structure
@@ -37,7 +38,7 @@ go go go:
 ### 01_chapter_LLM_Basics
 Focus: AI fundamentals, model behavior, prompting intuition, and anti-hallucination thinking.
 
-What is included:
+Included:
 - LLM basics and reliability guidance
 - Hallucination prevention patterns
 - Prompting concepts and testing discipline
@@ -48,28 +49,28 @@ Summarize the risk of using an LLM without validation for production QA decision
 ```
 
 ### 02_Chapter_Prompt_eng
-Focus: structured prompt design and frameworks for better task execution.
+Focus: structured prompt engineering and reusable QA frameworks.
 
-What is included:
-- RICE / POT prompt templates
-- Planned prompt flows for QA and automation tasks
-- Example login and Salesforce test-case prompt patterns
-- Prompt engineering strategies for clearer output
+Included:
+- RICE and POT prompt templates
+- Salesforce and login-case QA prompt examples
+- Plan-based prompt design for better reasoning and output quality
 
 Example use:
 ```text
-Create a QA prompt that turns a Jira requirement into test cases with validation, negative, and boundary coverage.
+Create a QA prompt that converts a Jira requirement into test cases with validation, negative, and boundary coverage.
 ```
 
 ### 03_Chapter_Local_TC_Generator
-Focus: local Jira-to-test-case generation using Python, LLMs, and export workflows.
+Focus: Jira-to-test-case generation using Python, local AI workflows, and export features.
 
-What is included:
-- Jira issue fetching and requirement parsing
-- Local prompt templates for test case generation
+Included:
+- Jira issue fetch and parsing logic
+- Local prompt templates for QA generation
 - Ollama-first local AI flow with Groq fallback
-- CSV/Excel export for generated test cases
+- CSV and Excel export generation
 - Settings screen and environment-based configuration
+- Runtime fallback handling for stale Jira secrets
 
 Example workflow:
 ```powershell
@@ -84,21 +85,21 @@ create test cases for SCRUM-6
 
 Key files:
 - app.py
-- pages/settings.py
-- config_store.py
-- jira_client.py
-- llm_client.py
-- exporter.py
-- templates/test_case_template.md
-- Results/
+- api/index.py
+- src/config_store.py
+- src/jira_client.py
+- src/llm_client.py
+- src/exporter.py
+- src/templates/test_case_template.md
+- src/Results/
 
 ### 04_Chapter_JobKitAI
 Focus: AI-assisted job search and resume optimization.
 
-What is included:
+Included:
 - Job description intake and matching workflows
-- Resume tailoring for roles and ATS alignment
-- Structured outputs for application preparation
+- Resume tailoring for ATS and role alignment
+- Structured output for application preparation
 
 Example use:
 ```text
@@ -108,14 +109,16 @@ Tailor my resume to a Senior QA Automation Engineer role using the job descripti
 ### 05_Chapter_JobTrackerAI
 Focus: job application tracking and dashboarding in a browser app.
 
-What is included:
+Included:
 - Vite + React job tracker UI
-- Job cards, modal details, and application status tracking
-- A lightweight local AI productivity workflow for job management
+- Kanban board with status grouping and filters
+- Job cards, modals, and application tracking
+- Modern design and UX improvements
 
 Local start:
 ```powershell
 cd "C:\Users\rajra\Documents\AI\4X AI Tester Blueprint\05_Chapter_JobTrackerAI"
+npm install
 npm run dev -- --host 0.0.0.0 --port 4173
 ```
 
@@ -125,26 +128,26 @@ http://localhost:4173/
 ```
 
 ### 06_Chapter_Branding_LinkedinSkills
-Focus: branding, content repurposing, and personal positioning for professional visibility.
+Focus: branding, content repurposing, and professional positioning.
 
-What is included:
+Included:
 - Personal brand guidance
 - LinkedIn content packages
-- Positioning and repurposing templates
+- Repurposing templates for posts and thought leadership
 
 Example use:
 ```text
-Turn a project summary into a LinkedIn post, a short article, and a personal brand narrative.
+Turn a project update into a LinkedIn post, article outline, and personal brand narrative.
 ```
 
 ### 07_Chapter_AI_Agents
 Focus: agentic workflows and structured AI planning for testing and QA tasks.
 
-What is included:
+Included:
 - Test plan generation from Jira issues
-- Agent-style task plans and prompt packing
-- Exportable generation outputs
-- Deterministic requirement extraction before optional AI enhancement
+- Agent-style prompt workflows and task planning
+- Exportable test plan generation
+- Requirement extraction before optional AI enhancement
 
 Local start:
 ```powershell
@@ -158,36 +161,34 @@ SCRUM-6
 ```
 
 ### References
-Focus: reusable notes, standards, and supporting materials across the blueprint.
+Focus: reusable notes, standards, and supporting reference materials.
 
-What is included:
+Included:
 - Anti-hallucination rules
 - Prompt comparison notes
-- Requirements and reference documents for learning and reuse
+- Supporting docs and references for long-term learning
 
 ## Verified working apps
 
-### 1) JobTracker (Vite + React)
+### 1) JobTracker (React + Vite)
 - Local URL: http://localhost:4173/
-- Vercel production URL: https://jobtrackerai-five.vercel.app
+- Vercel URL: https://jobtrackerai-five.vercel.app
 - Project folder: 05_Chapter_JobTrackerAI
 
 ### 2) Jira Test Case Generator (FastAPI + Vercel)
-- Local URL: http://localhost:8501/ (Streamlit dev mode)
-- Vercel production URL: https://jira-test-case-generator-delta.vercel.app
+- Local Streamlit URL: http://localhost:8501/
+- Vercel URL: https://jira-test-case-generator-delta.vercel.app
 - Project folder: 03_Chapter_Local_TC_Generator
 
-### 3) Jira Test Plan Generator (FastAPI + Vercel)
+### 3) Jira Test Plan Generator (Streamlit)
 - Local URL: http://localhost:8502/
-- Vercel production URL: https://jira-test-plan-generator.vercel.app
 - Project folder: 07_Chapter_AI_Agents/Test-Plan-Agent-Blast
 
 ## Quick examples
 
-### Example 1: Local test case generation
+### Example 1: Local Jira test case generation
 ```powershell
 cd "C:\Users\rajra\Documents\AI\4X AI Tester Blueprint\03_Chapter_Local_TC_Generator\src"
-python -m pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
@@ -199,23 +200,29 @@ create test cases for SCRUM-6
 ### Example 2: Job tracker app
 ```powershell
 cd "C:\Users\rajra\Documents\AI\4X AI Tester Blueprint\05_Chapter_JobTrackerAI"
+npm install
 npm run dev -- --host 0.0.0.0 --port 4173
 ```
 
 ### Example 3: Test plan generation
 ```powershell
 cd "C:\Users\rajra\Documents\AI\4X AI Tester Blueprint\07_Chapter_AI_Agents\Test-Plan-Agent-Blast"
-python app.py --issue-id SCRUM-6 --output output/test-plan.md
+python -m streamlit run streamlit_app.py --server.address localhost --server.port 8502
 ```
 
+## Deployment and troubleshooting notes
+The project includes a worked example of handling a live production failure caused by stale Jira credentials in Vercel. The fix path included:
+- verifying the Jira token directly against the Jira REST API
+- updating the app to accept alternate environment variable names
+- adding a fallback retry strategy for stale Production secrets
+- verifying the deployment source and rebuild flow
+
 ## Latest delivery summary
-The blueprint includes working local and deployed tools for:
-- AI-assisted test case creation
+The repository now includes working examples and tooling for:
+- AI-assisted test case creation and export
 - Jira requirement parsing into QA coverage
-- Job search and matching support
-- Personal-brand content workflows
-- QA planning with structured exports
+- Job matching and application tracking
+- AI-driven personal brand and content packaging
+- Agentic QA planning flows
 
-The Jira Test Plan Generator is a concrete example of deterministic testing: it extracts requirements from Jira data, rejects PRD noise, and builds test coverage before optional AI enrichment.
-
-- Last synchronized: 2026-08-31
+- Last synchronized: 2026-09-01
