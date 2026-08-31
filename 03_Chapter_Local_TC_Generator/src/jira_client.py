@@ -42,7 +42,10 @@ def fetch_issue(jira_url: str, email: str, api_token: str, issue_key: str) -> di
     if response.status_code in {401, 403}:
         raise JiraError("Jira rejected the configured credentials or permissions.")
     if response.status_code == 404:
-        raise JiraError(f"Jira issue {issue_key} was not found.")
+        raise JiraError(
+            f"Jira issue {issue_key} was not found in the configured workspace ({jira_url}). "
+            "Check that the issue exists in this Jira instance and that the JIRA_URL/JIRA_EMAIL/JIRA_API_TOKEN values are correct."
+        )
     if response.status_code >= 400:
         raise JiraError(f"Jira returned an error ({response.status_code}).")
 

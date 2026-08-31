@@ -16,6 +16,31 @@ from exporter import export_test_cases
 TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "test_case_template.md"
 ISSUE_KEY_PATTERN = re.compile(r"\b([A-Z][A-Z0-9]+-\d+)\b", re.IGNORECASE)
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background: linear-gradient(135deg, #0f172a 0%, #111827 35%, #172554 100%);
+    }
+    .block-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    div[data-testid="stSidebar"] {
+        background: rgba(15, 23, 42, 0.82);
+        border-right: 1px solid rgba(148, 163, 184, 0.2);
+    }
+    .stChatMessage {
+        background: rgba(15, 23, 42, 0.75);
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        border-radius: 18px;
+        padding: 1rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 
 def _build_prompt(issue: dict[str, str]) -> str:
     template = TEMPLATE_PATH.read_text(encoding="utf-8")
@@ -35,8 +60,15 @@ def _render_message(message: dict[str, str]) -> None:
 
 
 st.set_page_config(page_title="Jira Test Case Generator", page_icon="🧪")
+
+with st.sidebar:
+    st.title("Quick controls")
+    st.selectbox("Generation mode", ["Balanced", "Detailed", "Risk-focused"], index=0)
+    st.selectbox("Output style", ["Standard QA", "Regression sweep", "Acceptance criteria"], index=0)
+    st.caption("The local app keeps Jira requirements as the source of truth.")
+
 st.title("Jira Test Case Generator")
-st.caption("Turn one Jira issue into a structured test-case draft.")
+st.caption("Turn one Jira issue into a structured, colorful test-case draft.")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
