@@ -76,10 +76,14 @@ def load_config() -> AppConfig:
     if os.getenv("VERCEL") == "1" and groq_api_key:
         provider = "groq"
 
+    jira_url = os.getenv("JIRA_URL", os.getenv("JIRA_BASE_URL", os.getenv("JIRA_HOST", ""))).strip()
+    jira_email = os.getenv("JIRA_EMAIL", os.getenv("ATLASSIAN_EMAIL", "")).strip()
+    jira_api_token = os.getenv("JIRA_API_TOKEN", os.getenv("JIRA_TOKEN", os.getenv("ATLASSIAN_API_TOKEN", ""))).strip()
+
     return AppConfig(
-        jira_url=_normalize_jira_url(os.getenv("JIRA_URL", os.getenv("JIRA_BASE_URL", ""))),
-        jira_email=os.getenv("JIRA_EMAIL", "").strip(),
-        jira_api_token=os.getenv("JIRA_API_TOKEN", "").strip(),
+        jira_url=_normalize_jira_url(jira_url),
+        jira_email=jira_email,
+        jira_api_token=jira_api_token,
         ollama_url=os.getenv("OLLAMA_URL", DEFAULT_OLLAMA_URL).strip().rstrip("/"),
         ollama_model=os.getenv("OLLAMA_MODEL", DEFAULT_OLLAMA_MODEL).strip(),
         groq_api_key=groq_api_key,

@@ -74,30 +74,24 @@ async def health() -> dict[str, str]:
 
 
 @app.post("/api/generate")
-async def generate_cases(
-  request: Request,
-  issue_key: str | None = Form(default=None),
-) -> dict[str, str | list[str] | None]:
-  payload: dict[str, str] = {}
-  content_type = request.headers.get("content-type", "").lower()
+async def generate_cases(request: Request) -> dict[str, str | list[str] | None]:
+    payload: dict[str, str] = {}
+    content_type = request.headers.get("content-type", "").lower()
 
-  if content_type.startswith("application/json"):
     try:
-      payload = await request.json()
-    except (TypeError, ValueError):
-      payload = {}
-
-  if not issue_key and not payload:
-    try:
-      form = await request.form()
-      payload = {key: str(value) for key, value in form.multi_items()}
+        if "application/json" in content_type:
+            payload = await request.json()
+        elif "application/x-www-form-urlencoded" in content_type or "multipart/form-data" in content_type:
+            form = await request.form()
+            payload = {key: value for key, value in form.multi_items()}
+        else:
+            payload = dict(request.query_params)
     except Exception:
-      payload = {}
+        payload = {}
 
-  issue_key = issue_key or payload.get("issue_key") or payload.get("issueKey") or request.query_params.get("issue_key") or request.query_params.get("issueKey")
-
-  if not issue_key:
-    raise HTTPException(status_code=400, detail="Issue key is required.")
+    issue_key = (payload or {}).get("issue_key") or (payload or {}).get("issueKey")
+    if not issue_key:
+        raise HTTPException(status_code=400, detail="Issue key is required.")
 
     key = _issue_key(str(issue_key))
     if not key:
